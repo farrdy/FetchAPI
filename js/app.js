@@ -30,7 +30,7 @@ function loadJSON() {
         .then(function (data) {
             let html = '';
             data.forEach(employee => {
-                html += `<li>${employee.name} - ${employee.job}</li>`;
+                html += `<li>${employee.name} - ${employee.job} - ${employee.title}</li>`;
             });
             document.getElementById('result').innerHTML = html
         });
@@ -55,7 +55,6 @@ function loadREST() {
         })
         .catch(function (error) {
             console.log(error);
-
         })
 
 }
